@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<updates>
+	<update>
+		<name>Article Of The Day</name>
+		<description>Selects a random article each day and displays it in the module.</description>
+		<element>articleoftheday</element>
+		<type>module</type>
+		<version>1.0.0</version>
+		<client>0</client>
+		<infourl title="Article Of The Day">https://github.com/Spudley/mod_articleoftheday/releases/tag/1.0.0</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/Spudley/mod_articleoftheday/archive/1.0.0.zip</downloadurl>
+		</downloads>
+		<targetplatform name="joomla" version="3.[789]" />
+        <php_minimum>5.6.0</php_minimum>
+	</update>
+</updates>

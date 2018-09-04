@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.8" client="site" method="upgrade">
+	<name>MOD_ARTICLEOFTHEDAY_NAME</name>
+	<author>Simon Champion</author>
+	<creationDate>August 2018</creationDate>
+    <copyright>Copyright (C) 2018 Simon Champion.</copyright>
+    <license>GNU/GPL Version 2 or later - http://www.gnu.org/licenses/gpl-2.0.html</license>
+    <authorEmail>simon@simonchampion.net</authorEmail>
+    <authorUrl>https://github.com/Spudley</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_ARTICLEOFTHEDAY_DESCRIPTION</description>
+	<files>
+		<filename module="mod_articleoftheday">mod_articleoftheday.php</filename>
+		<folder>tmpl</folder>
+        <folder>classes</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_articleoftheday.sys.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_articleoftheday.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                <field name="htmlclass" type="text" default="" label="MOD_ARTICLEOFTHEDAY_HTMLCLASS_LABEL" description="MOD_ARTICLEOFTHEDAY_HTMLCLASS_DESC"/>
+
+				<field
+					name="categories"
+					type="category"
+					label="JCATEGORY"
+					description="MOD_ARTICLEOFTHEDAY_CATEGORIES_DESC"
+					extension="com_content"
+					multiple="true"
+					filter="int_array"
+					class="multipleCategories"
+				/>
+                <field name="fieldName" type="text" default="" label="MOD_ARTICLEOFTHEDAY_FIELDNAME_LABEL" description="MOD_ARTICLEOFTHEDAY_FIELDNAME_DESC"/>
+
+				<field
+					name="show_item_title"
+					type="radio"
+					label="MOD_ARTICLEOFTHEDAY_SHOW_ITEM_TITLE_LABEL"
+					description="MOD_ARTICLEOFTHEDAY_SHOW_ITEM_TITLE_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
+					filter="integer"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="link_title"
+					type="radio"
+					label="MOD_ARTICLEOFTHEDAY_LINK_TITLE_LABEL"
+					description="MOD_ARTICLEOFTHEDAY_LINK_TITLE_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
+					filter="integer"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="show_fields"
+					type="radio"
+					label="MOD_ARTICLEOFTHEDAY_SHOW_FIELDS_LABEL"
+					description="MOD_ARTICLEOFTHEDAY_SHOW_FIELDS_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
+					filter="integer"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="module_triggers_refresh"
+					type="radio"
+					label="MOD_ARTICLEOFTHEDAY_MODULE_TRIGGER_REFRESH_LABEL"
+					description="MOD_ARTICLEOFTHEDAY_MODULE_TRIGGER_REFRESH_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
+					filter="integer"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					rows="3"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+    <updateservers>
+        <server type="extension" priority="2" name="Article Of The Day Updates">https://raw.githubusercontent.com/Spudley/mod_articleoftheday/master/update.xml</server>
+    </updateservers>
+</extension>
+
