@@ -51,9 +51,11 @@ The module provides a set of events that can be implemented by a plugin of type 
 
 - onNewArticleOfTheDay
 
-     This event is fired when a new article of the day is selected. An example use-case for this would be for a plugin to add an automated tweet to your twitter feed telling your followers that there is a new article of the day. The arguments for this method are the article ID and the field name (ie the field specified in the module config). It should not return anything.
+     This event is fired when a new article of the day is selected. An example use-case for this is [this plugin that sends an automated tweet](https://github.com/Spudley/plg_articleoftheday_tweet) to your twitter feed telling your followers that there is a new article of the day. The arguments for this method are the article ID and the field name (ie the field specified in the module config). It should not return anything.
 
 If you write a plugin for this module which you thing would be useful for others, please share it. I will be happy to include a link to it in this documentation.
+
+As noted above, I have already written a [Twitter integration plugin for this module](https://github.com/Spudley/plg_articleoftheday_tweet).
 
 
 Update the selected article from outside the module
