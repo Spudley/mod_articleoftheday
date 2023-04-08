@@ -13,7 +13,7 @@ $htmlclass = $params->get('htmlclass','articleoftheday');
 JLoader::register('ArticleOfTheDay', __DIR__ . '/classes/ArticleOfTheDay.php');
 
 $aotd = new ArticleOfTheDay($params);
-if ($params->get('module_triggers_refresh', 1) {
+if ($params->get('module_triggers_refresh', 1)) {
     $aotd->checkAndUpdate();
 }
 
